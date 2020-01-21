@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+ENGINE_PATH = File.expand_path('../..',  __FILE__)
+dummy_rails_path = File.expand_path('../../spec/dummy/script/rails',  __FILE__)
+if File.exist?(dummy_rails_path)
+  load dummy_rails_path
+else
+  puts "Please first run 'rake refinery:testing:dummy_app' to create a dummy Refinery CMS application."
+end
